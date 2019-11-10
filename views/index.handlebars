@@ -3,6 +3,8 @@
 <h2>Burgers that are not devoured!</h2>
 
 <ul>
+  {{!-- Need burger name appended here. --}}
+  
   {{#each burgers}}
     {{#unless devoured}}
       {{> burgers/burger-block devoured=true}}
@@ -13,6 +15,8 @@
 <h2>Burgers that are devoured!</h2>
 
 <ul>
+  {{!-- Need burger name appended here. --}}
+
   {{#each burgers}}
     {{#if devoured}}
       {{> burgers/burger-block devoured=false}}
