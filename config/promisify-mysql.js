@@ -6,7 +6,10 @@ async function query(...inputs) {
     return new Promise((resolve, reject) => {
     connection.query(...inputs, 
         function(err, results) {
-          if (err) return reject(err);
+          if (err) { 
+            console.error(err);
+            return reject(err);
+          }
           resolve(results);
         }
       );
