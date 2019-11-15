@@ -5,9 +5,9 @@ async function query(...inputs) {
     const connection = await getConnection();
     return new Promise((resolve, reject) => {
       console.log(inputs)
-    const query = connection.query(...inputs, 
+    const yabba = connection.query(...inputs, 
         function(err, results) {
-          console.log(query.sql);
+          console.log(yabba.sql);
           if (err) { 
             console.error(err);
             return reject(err);
