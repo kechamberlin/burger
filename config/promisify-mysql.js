@@ -14,7 +14,7 @@ async function query(...inputs) {
           }
           resolve(results);
         }
-      );
+      ).catch(error => console.err(error));
     })
 }
 
