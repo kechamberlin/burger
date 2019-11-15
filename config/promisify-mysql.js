@@ -4,6 +4,7 @@ async function query(...inputs) {
     // ensure every time we query we have a connection
     const connection = await getConnection();
     return new Promise((resolve, reject) => {
+      console.log(inputs)
     const query = connection.query(...inputs, 
         function(err, results) {
           console.log(query.sql);
